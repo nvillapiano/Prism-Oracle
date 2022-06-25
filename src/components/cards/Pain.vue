@@ -59,39 +59,40 @@ export default {
 
   &__drip-crest {
     position: absolute;
-    bottom: -8rem;
+    top: -35px;
     left: 20%;
     width: 20%;
-    height: 200%;
+    height: 43px;
     background: var(--color__pain);
     border: 1px solid var(--color__white);
-    z-index: 1;    
+    z-index: 1;
 
     &::before {
       content: "";
       position: absolute;
-      top: -1.5rem;
-      left: 0px;
-      width: 100%;
-      height: 8rem;
+      top: -28px;
+      left: -1px;
+      width: calc(100% + 2px);
+      height: 58px;
       background: inherit;
       border: 1px solid var(--color__white);
       border-radius: 1.7rem 1.7rem 2rem;
     }
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
-      height: 10rem;
+      height: 195px;
       background: inherit;
     }
 
     &:nth-of-type(2) {
-      bottom: 1rem;
-      left: 60%;
+    top: -170px;
+    left: 60%;
+    height: 163px;
     }
   }
 
@@ -151,6 +152,11 @@ export default {
         }
       }
     }
+  }
+
+  // &__drip-valley,
+  &__spot-remover {
+    display: none;
   }
 }
 

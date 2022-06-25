@@ -1,4 +1,5 @@
-# prism-oracle
+# Prism Oracle
+A digital re-creation and love letter to Prism Oracle by Nicole Pivirotto
 
 ## Project setup
 ```

@@ -1,6 +1,6 @@
 <template>
 
-  <section class="Card" :class="[{ [color]: color }, { [cardName]: cardName }]">
+  <section class="Card" :class="[{ [cardName]: cardName }]">
     <div class="Card__wrapper">
       <div class="Card__design">      
         <slot></slot>
@@ -10,8 +10,6 @@
       </footer>      
     </div>
 
-
-
   </section>
 
 </template>
@@ -20,8 +18,7 @@
 export default {
   name: 'Card',
   props: {
-    cardName: String,
-    color: String
+    cardName: String
   }
 }
 </script>
@@ -32,9 +29,24 @@ export default {
   box-shadow: 23px 18px 31px var(--color__#{$color});
 }
 
+@mixin cardColorBase($colorUppercase, $color) {
+  .Card.#{$colorUppercase} {
+    background: var(--color__#{$color});    
+
+    .Card {      
+      &__name {
+        background: var(--color__#{$color});
+      }
+    }
+
+    &::after {
+      @include boxShadow(#{$color});      
+    }
+  }  
+}
+
 .Card {
   margin: 0 auto;
-  // max-height: 50vh;
   min-width: 320px;
   aspect-ratio: 1/1.55;
   border-radius: 0.5rem;
@@ -67,6 +79,7 @@ export default {
     z-index: 2;
   }
 
+  // page background
   &::before {
     content: '';
     position: fixed;
@@ -79,6 +92,7 @@ export default {
     opacity: 0.95;
   }
 
+  // shadow base
   &::after {
     content: '';
     position: absolute;
@@ -92,22 +106,11 @@ export default {
     filter: brightness(0.9);
 
   }
-
-  // colors 
-
-  &.anger {
-    background: var(--color__anger);    
-
-    .Card {      
-      &__name {
-        background: var(--color__anger);
-      }
-    }
-
-    &::after {
-      @include boxShadow(anger);      
-    }
-  }
 }
+
+// Colors
+
+@include cardColorBase(Anger, anger);
+@include cardColorBase(Pain, pain);
 
 </style>

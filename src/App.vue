@@ -1,12 +1,19 @@
 <template>
   <div id="app">
     <main>
-      <Card 
+      <!-- Anger -->
+      <!-- <Card 
         cardName="Anger"
-        color="anger"
       >
         <Anger />
-      </Card>
+      </Card> -->
+
+      <!-- Pain -->
+      <Card 
+        cardName="Pain"
+      >
+        <Pain />
+      </Card>      
     </main>
 
   </div>
@@ -15,12 +22,14 @@
 <script>
 import Card from './components/Card.vue'
 import Anger from './components/cards/Anger.vue'
+import Pain from './components/cards/Pain.vue'
 
 export default {
   name: 'App',
   components: {
     Card,
     Anger,
+    Pain,
   }
 }
 </script>

@@ -13,6 +13,8 @@
       <div></div>
     </div>
     <div class="Anger__slash"></div>
+    <div class="Anger__eye"></div>
+    <div class="Anger__eyelid"></div>
     <div class="Anger__iris"></div>
     <div class="Anger__pupil"></div>    
   </section>
@@ -94,6 +96,26 @@ $squiggle-height: 3rem;
     transform: rotate(-20deg) translateY(6.4rem);
   }
 
+  &__eye {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(44deg);
+    width: 9rem;
+    height: 9rem;
+    border-radius: 82% 0%;
+    border: 1px solid var(--color__white);
+    background: var(--color__anger);
+    z-index: 1;
+  }
+
+  &__eyelid {
+      @extend .Anger__eye; 
+      background: var(--color__anger);
+      z-index: 0;
+      transform: translate(-50%, -50%) rotate(44deg) scale(1.2);  
+  }  
+
   &__pupil {
     position: absolute;
     top: 50%;
@@ -104,6 +126,7 @@ $squiggle-height: 3rem;
     background: var(--color__white);
     transform: translateX(-50%) translateY(-50%);
     overflow: hidden;
+    z-index: 3;
   }
 
   &__iris {

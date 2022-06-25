@@ -50,7 +50,7 @@ export default {
 
   &__drips {
     position: absolute;
-    bottom: 3rem;
+    bottom: 48px;
     left: 0;
     width: 100%;
     height: 36%;
@@ -76,7 +76,7 @@ export default {
       height: 58px;
       background: inherit;
       border: 1px solid var(--color__white);
-      border-radius: 1.7rem 1.7rem 2rem;
+      border-radius: 27px 27px 16px;
     }
 
     &::after {
@@ -98,7 +98,7 @@ export default {
 
   &__drip-valley {
     position: absolute;
-    bottom: 7.2rem;
+    bottom: 115px;
     left: -1px;
     aspect-ratio: 1/1.53;
     width: calc(20% + 2px);
@@ -111,12 +111,12 @@ export default {
 
     & + .Pain__drip-valley {
       left: calc(40% - 1px);
-      bottom: 5.2rem;
+      bottom: 83px;
       aspect-ratio: 1/1.84;
 
       & + .Pain__drip-valley {
         left: calc(80% - 1px);
-        bottom: 9.2rem;
+        bottom: 147px;
         aspect-ratio: 1/1.89;
         width: calc(20% + 3px);
       }
@@ -128,7 +128,7 @@ export default {
     top: 27px;
     left: 57px;
     width: 5px;
-    height: 8rem;
+    height: 128px;
     background: var(--color__pain);
     z-index: 2;
     border-radius: 12px 5px 6px;
@@ -145,7 +145,7 @@ export default {
         transform: rotate(180deg);
 
         & + .Pain__spot-remover {
-          height: 10rem;
+          height: 160px;
           left: 225px;
           top: -7px;
           border-radius: 1px 24px 6px/0px 87px 6px;

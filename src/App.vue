@@ -1,28 +1,46 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <main>
+      <Card 
+        cardName="Anger"
+        color="orange"
+      >
+        <Anger />
+      </Card>
+    </main>
+
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Card from './components/Card.vue'
+import Anger from './components/cards/Anger.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Card,
+    Anger,
   }
 }
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+
+@import "@/globals/index.scss";
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap');
+
+html,
+body {
+  font-family: 'Work Sans', sans-serif;  
 }
+
+main {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 </style>

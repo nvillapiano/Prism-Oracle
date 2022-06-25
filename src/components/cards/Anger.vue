@@ -1,0 +1,147 @@
+<template>
+  <section class="Anger__design">
+    <div class="Anger__squiggle">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="Anger__slash"></div>
+    <div class="Anger__iris"></div>
+    <div class="Anger__pupil"></div>    
+  </section>
+</template>
+
+<script>
+export default {
+  name: 'Anger',
+  props: {
+    templateProp: String
+  }
+}
+</script>
+
+<style lang="scss">
+
+$squiggle-height: 3rem;
+
+.Anger {
+  background: orange;
+
+  &__design {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+  }
+
+  &__squiggle {
+
+    div {
+      width: $squiggle-height;
+      height: $squiggle-height;
+      position: absolute; 
+      top: 0;     
+      left: 50%;
+      transform: translateX(-50%);
+      margin-top: -5.1rem;
+
+      &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 1px;
+          height: 140%;
+          background: var(--color__white);        
+      }
+
+      &:nth-of-type(odd) {        
+        
+        &::after {
+          transform: rotate(-45deg) translateX(1.4rem) translateY(0.6rem);
+        }
+      }
+
+      &:nth-of-type(even) {
+          
+          &::after {
+            transform: rotate(45deg) translateX(0.6rem) translateY(-1.4rem);
+          }
+      }
+
+      &:nth-of-type(2) {
+        top: $squiggle-height * 1;
+      }
+    }
+  }
+
+  &__slash {
+    position: absolute;
+    top: 0;
+    left: -10rem;
+    width: 200%;
+    height: 1px;
+    background: var(--color__white);
+    transform: rotate(-20deg) translateY(6.4rem);
+  }
+
+  &__pupil {
+    position: absolute;
+    top: 50%;
+    left: 50%;    
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background: var(--color__white);
+    transform: translateX(-50%) translateY(-50%);
+    overflow: hidden;
+  }
+
+  &__iris {
+    @extend .Anger__pupil;
+    width: 4rem;
+    height: 4rem;
+    border: 1px solid var(--color__white);
+    background: var(--color__orange);
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--color__orange);
+      background-image: 
+        radial-gradient(var(--color__white) 10%, transparent 11%),
+        radial-gradient(var(--color__white) 10%, transparent 11%);
+      background-size: 7px 7px;
+      background-position: 0 0, 4px 4px;
+      background-repeat: repeat;      
+    }
+  }
+
+  @for $i from 1 through 10 {
+    .Anger__squiggle {
+
+      div {
+        &:nth-of-type(#{$i}) {
+          top: $squiggle-height * ($i * 1 )
+        }
+      }
+
+    }
+  }  
+
+}
+
+</style>

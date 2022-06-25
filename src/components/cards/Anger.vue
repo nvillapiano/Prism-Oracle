@@ -32,7 +32,7 @@ export default {
 $squiggle-height: 3rem;
 
 .Anger {
-  background: orange;
+  background: var(--color__anger);
 
   &__design {
     position: absolute;
@@ -111,7 +111,7 @@ $squiggle-height: 3rem;
     width: 4rem;
     height: 4rem;
     border: 1px solid var(--color__white);
-    background: var(--color__orange);
+    background: var(--color__anger);
 
     &::before {
       content: '';
@@ -120,7 +120,7 @@ $squiggle-height: 3rem;
       left: 0;
       width: 100%;
       height: 100%;
-      background: var(--color__orange);
+      background: var(--color__anger);
       background-image: 
         radial-gradient(var(--color__white) 10%, transparent 11%),
         radial-gradient(var(--color__white) 10%, transparent 11%);

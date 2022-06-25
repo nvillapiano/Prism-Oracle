@@ -34,8 +34,9 @@ export default {
 
 .Card {
   margin: 0 auto;
-  height: 50vh;
-  width: 25vw;
+  // max-height: 50vh;
+  min-width: 320px;
+  aspect-ratio: 1/1.55;
   border-radius: 0.5rem;
   padding: 1rem;
   color: var(--color__white);  
@@ -75,7 +76,7 @@ export default {
     height: 100%;
     background: inherit;
     z-index: -1;
-    opacity: 0.91;
+    opacity: 0.95;
   }
 
   &::after {
@@ -88,23 +89,23 @@ export default {
     border-radius: 0.5rem;
     z-index: -1;        
     transform: translateX(-50%) translateY(-50%);
-    filter: brightness(0.92);
+    filter: brightness(0.9);
 
   }
 
   // colors 
 
-  &.orange {
-    background: var(--color__orange);    
+  &.anger {
+    background: var(--color__anger);    
 
     .Card {      
       &__name {
-        background: orange;
+        background: var(--color__anger);
       }
     }
 
     &::after {
-      @include boxShadow(orange);      
+      @include boxShadow(anger);      
     }
   }
 }

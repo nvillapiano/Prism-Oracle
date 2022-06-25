@@ -3,7 +3,7 @@
     <main>
       <Card 
         cardName="Anger"
-        color="orange"
+        color="anger"
       >
         <Anger />
       </Card>

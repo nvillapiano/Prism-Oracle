@@ -1,35 +1,16 @@
 <template>
-  <div id="app">
+  <div id="app">    
     <main>
-      <!-- Anger -->
-      <!-- <Card 
-        cardName="Anger"
-      >
-        <Anger />
-      </Card> -->
-
-      <!-- Pain -->
-      <Card 
-        cardName="Pain"
-      >
-        <Pain />
-      </Card>      
+      <router-view/>
     </main>
 
   </div>
 </template>
 
 <script>
-import Card from './components/Card.vue'
-import Anger from './components/cards/Anger.vue'
-import Pain from './components/cards/Pain.vue'
 
 export default {
-  name: 'App',
   components: {
-    Card,
-    Anger,
-    Pain,
   }
 }
 </script>

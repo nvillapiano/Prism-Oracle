@@ -1,9 +1,8 @@
-$color__white: white;
-$color__anger: rgba(130, 30, 30, 1);
 
 :root {
-  --color__white: white;
+  --color__black: 0, 0, 0;
+  --color__white: rgb(255, 255, 255);
   // cards
-  --color__anger: rgba(130, 30, 30, 1);  
-  --color__pain: rgba(100, 25, 40, 1);  
+  --color__anger: rgb(130, 30, 30);  
+  --color__pain: rgb(100, 25, 40);  
 }

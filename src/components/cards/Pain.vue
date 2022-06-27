@@ -89,6 +89,12 @@ export default {
       background: inherit;
     }
 
+    &:nth-of-type(1) {
+      @media only screen and (max-resolution: 1dppx) {
+        height: 30px;    
+      }
+    }    
+
     &:nth-of-type(2) {
     top: -170px;
     left: 60%;
@@ -109,17 +115,30 @@ export default {
     border-bottom: none;
     @include dots();
 
-    & + .Pain__drip-valley {
-      left: calc(40% - 1px);
-      bottom: 83px;
-      aspect-ratio: 1/1.84;
+    &:nth-of-type(3) {
+      bottom: 112px;
+      background-position: 1px 0px;
+    }
 
-      & + .Pain__drip-valley {
-        left: calc(80% - 1px);
-        bottom: 147px;
-        aspect-ratio: 1/1.89;
-        width: calc(20% + 3px);
+    &:nth-of-type(4) {
+      bottom: 82.5px;
+      left: 113.4px;
+      width: calc(20% + 2px);
+      aspect-ratio: 1/1.881;
+      background-position: 3.6px 6px;
+      z-index: 2;
+
+      @media only screen and (max-resolution: 1dppx) {
+        
       }
+    }
+
+    &:nth-of-type(5) {
+      bottom: 143px;
+      left: calc(80% - 1px);
+      width: calc(20% + 3px);
+      aspect-ratio: 1/1.9;
+      background-position: -1px -9px;
     }
   }
 
@@ -159,5 +178,7 @@ export default {
     display: none;
   }
 }
+
+
 
 </style>

@@ -127,10 +127,6 @@ export default {
       aspect-ratio: 1/1.881;
       background-position: 3.6px 6px;
       z-index: 2;
-
-      @media only screen and (max-resolution: 1dppx) {
-        
-      }
     }
 
     &:nth-of-type(5) {

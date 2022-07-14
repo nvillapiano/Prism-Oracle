@@ -23,8 +23,4 @@ export default {
 
 <style lang="scss" >
 
-.home {
-  background: red;
-}
-
 </style>

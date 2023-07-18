@@ -2,18 +2,23 @@
   <section class="ToC">
     <div @click="closeToC($event)" class="ToC__overlay"></div>
     <div class="ToC__list">
-      <router-link class="ToC__link" to="/home">🏠 Home</router-link>
-      <router-link class="ToC__link" to="/home">🗣️ About</router-link>
+      <router-link @click="closeToC($event)" class="ToC__link" to="/home">🏠 Home</router-link>
+      <router-link @click="closeToC($event)" class="ToC__link" to="/home">🗣️ About</router-link>
       <div class="ToC__link">🃏 Cards</div>
       <ul>
         <li>
-          <router-link to='/pain'>
+          <router-link @click="closeToC($event)" to='/pain'>
             Pain
           </router-link>
         </li>
         <li>
-          <router-link to='/anger'>
+          <router-link @click="closeToC($event)" to='/anger'>
             Anger
+          </router-link>
+        </li>
+        <li>
+          <router-link @click="closeToC($event)" to='/stop'>
+            Stop
           </router-link>
         </li>
       </ul>

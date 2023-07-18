@@ -6,5 +6,13 @@ module.exports = defineConfig({
       entry: './src/main.js',
       title: 'Prism Oracle - A digital tribute'
     }
+  },
+  css: {
+    sourceMap: true,
+    loaderOptions: {
+      sass: {
+        additionalData: `@import "@/globals/_mixins.scss";`
+      }
+    }
   }
 })

@@ -15,15 +15,13 @@ export default {
       const toc = document.getElementsByClassName('ToC')[0];      
 
       toc.classList.toggle('ToC--active')
-
       function open() {
-        toggle.classList.add('hamburger--active')        
+        toggle.classList.add('hamburger--active')  
+        toc.classList.add('ToC--active-z')      
 
         setTimeout(() => {
           toggle.classList.add('hamburger--active-cross')
-        }, 200);      
-
-        toc.classList.add('ToC--active-z')        
+        }, 200);                      
       }
 
       function close() {
@@ -44,13 +42,6 @@ export default {
         open()
       }      
     }
-  },
-  mounted() {
-    const overlay = document.getElementsByClassName('ToC__overlay')[0]
-    console.log('overlay', overlay)
-    overlay.onclick = function() {
-      console.log('foo')
-    };
   }
 }
 </script>

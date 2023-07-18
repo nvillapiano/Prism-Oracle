@@ -143,13 +143,8 @@ $squiggle-height: 3rem;
       left: 0;
       width: 100%;
       height: 100%;
-      background: var(--color__anger);
-      background-image: 
-        radial-gradient(var(--color__white) 10%, transparent 11%),
-        radial-gradient(var(--color__white) 10%, transparent 11%);
-      background-size: 7px 7px;
-      background-position: 0 0, 4px 4px;
-      background-repeat: repeat;      
+      background-color: var(--color__anger);
+      @extend %dotMatrix;
     }
   }
 

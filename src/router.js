@@ -4,6 +4,7 @@ import Home from './views/Home.vue';
 import Anger from './views/Anger.vue'
 import Pain from './views/Pain.vue'
 import Stop from './views/Stop.vue'
+import Strength from './views/Strength.vue'
 
 
 Vue.use(Router);
@@ -47,6 +48,11 @@ export default new Router({
       path: '/stop',
       name: 'stop',
       component: Stop,
+    },
+    {
+      path: '/strength',
+      name: 'strength',
+      component: Strength,
     },
     // {
     //   path: '/wall-drawing-260-glossary',

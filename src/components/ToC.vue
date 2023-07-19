@@ -21,6 +21,11 @@
             Stop
           </router-link>
         </li>
+        <li>
+          <router-link @click="closeToC($event)" to='/strength'>
+            Strength
+          </router-link>
+        </li>
       </ul>
     </div>
   </section>

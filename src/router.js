@@ -6,6 +6,7 @@ import Pain from './views/Pain.vue'
 import Stop from './views/Stop.vue'
 import Strength from './views/Strength.vue'
 import Energy from './views/Energy.vue'
+import Frustration from './views/Frustration.vue'
 
 
 Vue.use(Router);
@@ -59,6 +60,11 @@ export default new Router({
       path: '/energy',
       name: 'energy',
       component: Energy,
+    },
+    {
+      path: '/frustration',
+      name: 'frustration',
+      component: Frustration,
     },
   ],
 });

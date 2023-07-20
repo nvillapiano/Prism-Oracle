@@ -31,6 +31,11 @@
             Energy
           </router-link>
         </li>
+        <li>
+          <router-link @click="closeToC($event)" to='/frustration'>
+            Frustration
+          </router-link>
+        </li>
       </ul>
     </div>
   </section>

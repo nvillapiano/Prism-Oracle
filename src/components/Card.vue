@@ -115,5 +115,6 @@ export default {
 @include cardColorBase(Stop, stop);
 @include cardColorBase(Strength, strength);
 @include cardColorBase(Energy, energy);
+@include cardColorBase(Frustration, frustration);
 
 </style>

@@ -114,5 +114,6 @@ export default {
 @include cardColorBase(Pain, pain);
 @include cardColorBase(Stop, stop);
 @include cardColorBase(Strength, strength);
+@include cardColorBase(Energy, energy);
 
 </style>

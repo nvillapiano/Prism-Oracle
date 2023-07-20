@@ -26,6 +26,11 @@
             Strength
           </router-link>
         </li>
+        <li>
+          <router-link @click="closeToC($event)" to='/energy'>
+            Energy
+          </router-link>
+        </li>
       </ul>
     </div>
   </section>

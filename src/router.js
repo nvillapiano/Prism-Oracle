@@ -5,6 +5,7 @@ import Anger from './views/Anger.vue'
 import Pain from './views/Pain.vue'
 import Stop from './views/Stop.vue'
 import Strength from './views/Strength.vue'
+import Energy from './views/Energy.vue'
 
 
 Vue.use(Router);
@@ -54,25 +55,10 @@ export default new Router({
       name: 'strength',
       component: Strength,
     },
-    // {
-    //   path: '/wall-drawing-260-glossary',
-    //   name: 'Wall Drawing 260 glossary',
-    //   component: Project260Glossary,
-    // },
-    // {
-    //   path: '/wall-drawing-370',
-    //   name: 'Wall Drawing 370',
-    //   component: WallDrawing370,
-    // },
-    // {
-    //   path: '/wall-drawing-610',
-    //   name: 'Wall Drawing 610',
-    //   component: WallDrawing610,
-    // },
-    // {
-    //   path: '/wall-drawing-1256',
-    //   name: 'Wall Drawing 1256',
-    //   component: WallDrawing1256,
-    // },
+    {
+      path: '/energy',
+      name: 'energy',
+      component: Energy,
+    },
   ],
 });

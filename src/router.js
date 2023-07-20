@@ -7,7 +7,7 @@ import Stop from './views/Stop.vue'
 import Strength from './views/Strength.vue'
 import Energy from './views/Energy.vue'
 import Frustration from './views/Frustration.vue'
-
+import Happiness from './views/Happiness.vue'
 
 Vue.use(Router);
 
@@ -65,6 +65,11 @@ export default new Router({
       path: '/frustration',
       name: 'frustration',
       component: Frustration,
+    },
+    {
+      path: '/happiness',
+      name: 'happiness',
+      component: Happiness,
     },
   ],
 });

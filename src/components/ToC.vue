@@ -36,6 +36,11 @@
             Frustration
           </router-link>
         </li>
+        <li>
+          <router-link @click="closeToC($event)" to='/happiness'>
+            Happiness
+          </router-link>
+        </li>
       </ul>
     </div>
   </section>

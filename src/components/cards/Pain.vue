@@ -118,6 +118,11 @@ export default {
       aspect-ratio: 1/1.881;
       background-position: 3.6px 6px;
       z-index: 2;
+
+      @media (-webkit-max-device-pixel-ratio: 1.1) {
+        width: calc(20% + 3px);
+        aspect-ratio: 1/1.49;
+      }
     }
 
     &:nth-of-type(5) {
@@ -126,6 +131,11 @@ export default {
       width: calc(20% + 3px);
       aspect-ratio: 1/1.9;
       background-position: -1px -9px;
+
+      @media (-webkit-max-device-pixel-ratio: 1.1) {
+        bottom: 141px;
+        aspect-ratio: 1/1.87;
+      }
     }
   }
 

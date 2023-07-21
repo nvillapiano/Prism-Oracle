@@ -107,7 +107,7 @@ export default {
     @extend %dotMatrixLarge;
 
     &:nth-of-type(3) {
-      bottom: 112px;
+      bottom: 110px;
       background-position: 1px 0px;
     }
 

@@ -3,7 +3,7 @@
     <div @click="closeToC($event)" class="ToC__overlay"></div>
     <div class="ToC__list">
       <router-link @click="closeToC($event)" class="ToC__link" to="/home">🏠 Home</router-link>
-      <router-link @click="closeToC($event)" class="ToC__link" to="/home">🗣️ About</router-link>
+      <!-- <router-link @click="closeToC($event)" class="ToC__link" to="/home">🗣️ About</router-link> -->
       <div class="ToC__link">🃏 Cards</div>
       <ul>
         <li>
@@ -44,6 +44,11 @@
         <li>
           <router-link @click="closeToC($event)" to='/rejection'>
             Rejection
+          </router-link>
+        </li>
+        <li>
+          <router-link @click="closeToC($event)" to='/success'>
+            Success
           </router-link>
         </li>
       </ul>

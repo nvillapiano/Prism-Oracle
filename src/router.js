@@ -9,6 +9,7 @@ import Energy from './views/Energy.vue'
 import Frustration from './views/Frustration.vue'
 import Happiness from './views/Happiness.vue'
 import Rejection from './views/Rejection.vue'
+import Success from './views/Success.vue'
 
 Vue.use(Router);
 
@@ -76,6 +77,11 @@ export default new Router({
       path: '/rejection',
       name: 'rejection',
       component: Rejection,
+    },
+    {
+      path: '/success',
+      name: 'success',
+      component: Success,
     },
   ],
 });

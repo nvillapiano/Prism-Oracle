@@ -1,7 +1,16 @@
 %dotMatrix {
   background-image: 
-  radial-gradient(var(--color__white) 10%, transparent 11%),
-  radial-gradient(var(--color__white) 10%, transparent 11%);
+    radial-gradient(var(--color__white) 10%, transparent 11%),
+    radial-gradient(var(--color__white) 10%, transparent 11%);
+  background-size: 7px 7px;
+  background-position: 0 0, 4px 4px;
+  background-repeat: repeat;   
+}
+
+@mixin dotMatrix() {
+  background-image: 
+    radial-gradient(var(--color__white) 10%, transparent 11%),
+    radial-gradient(var(--color__white) 10%, transparent 11%);
   background-size: 7px 7px;
   background-position: 0 0, 4px 4px;
   background-repeat: repeat;   

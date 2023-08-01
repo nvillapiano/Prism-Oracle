@@ -37,7 +37,7 @@ export default {
 
   &__hill {
     position: absolute;
-    bottom: 0;
+    bottom: -1rem;
     left: 50%;
     transform: translateX(-50%);
     width: 200%;
@@ -67,7 +67,8 @@ export default {
       border-radius: 50% 50% 0 0 / 50%;
 
       &:nth-of-type(6) {
-        height: 5rem !important;
+        width: calc(100% - 15rem) !important;
+        height: 5.5rem !important;
         border-radius: 50% 50% 0 0 / 22% !important;
         @extend %dotMatrix;
       }   
@@ -124,7 +125,7 @@ export default {
   $j: 50 - $i * 2%;
   .Success__arch-inner:nth-of-type(#{$i}) {    
     width: calc(100% - (2rem * ($i / .8)));
-    height: calc(100% - (1rem * (($i * 1.1) + $i / 1)));
+    height: calc(100% - (1rem * (($i * .9) + $i / 1)));
     margin-top: (1rem + (($i * 1.3) - 2));
     border-radius: 50% 50% 0 0 / #{$j};
     z-index: $i;    

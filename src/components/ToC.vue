@@ -17,7 +17,7 @@
 </template>
 
 <script>
-const viewsContext = require.context('../views', false, /[A-Z]\w+View\.vue$/);
+import { generateRoutes, formatRouteName } from '@/utils/routeUtils';
 
 export default {
   name: 'Toc',
@@ -27,18 +27,11 @@ export default {
     }
   },
   created() {
-    // Generate routes from views
-    this.routes = viewsContext.keys().map(key => {
-      const name = key.match(/([A-Z]\w+)View\.vue$/)[1];
-      const path = `/${name.toLowerCase()}`;
-      return { path, name };
-    }).filter(route => route.name !== 'Home'); // Exclude Home since it's handled separately
+    // Generate routes from views, excluding Home and not including component definitions
+    this.routes = generateRoutes({ includeComponent: false, excludeHome: true });
   },
   methods: {
-    formatRouteName(name) {
-      // Convert camelCase to Title Case with spaces
-      return name.replace(/([A-Z])/g, ' $1').trim();
-    },
+    formatRouteName,
     closeToC() {
       const toggle = document.getElementsByClassName('Hamburger')[0]
       const toc = document.getElementsByClassName('ToC')[0];      

@@ -18,7 +18,6 @@ export default {
 </script>
 
 <style lang="scss">
-@use '@/globals/index' as *;
 
 .Rejection {
   height: 100%;

@@ -6,49 +6,9 @@
       <!-- <router-link @click="closeToC($event)" class="ToC__link" to="/home">🗣️ About</router-link> -->
       <div class="ToC__link">🃏 Cards</div>
       <ul>
-        <li>
-          <router-link @click="closeToC($event)" to='/pain'>
-            Pain
-          </router-link>
-        </li>
-        <li>
-          <router-link @click="closeToC($event)" to='/anger'>
-            Anger
-          </router-link>
-        </li>
-        <li>
-          <router-link @click="closeToC($event)" to='/stop'>
-            Stop
-          </router-link>
-        </li>
-        <li>
-          <router-link @click="closeToC($event)" to='/strength'>
-            Strength
-          </router-link>
-        </li>
-        <li>
-          <router-link @click="closeToC($event)" to='/energy'>
-            Energy
-          </router-link>
-        </li>
-        <li>
-          <router-link @click="closeToC($event)" to='/frustration'>
-            Frustration
-          </router-link>
-        </li>
-        <li>
-          <router-link @click="closeToC($event)" to='/happiness'>
-            Happiness
-          </router-link>
-        </li>
-        <li>
-          <router-link @click="closeToC($event)" to='/rejection'>
-            Rejection
-          </router-link>
-        </li>
-        <li>
-          <router-link @click="closeToC($event)" to='/success'>
-            Success
+        <li v-for="route in routes" :key="route.path">
+          <router-link @click="closeToC($event)" :to="route.path">
+            {{ formatRouteName(route.name) }}
           </router-link>
         </li>
       </ul>
@@ -57,11 +17,28 @@
 </template>
 
 <script>
+const viewsContext = require.context('../views', false, /[A-Z]\w+View\.vue$/);
+
 export default {
   name: 'Toc',
-  props: {
-  }, 
+  data() {
+    return {
+      routes: []
+    }
+  },
+  created() {
+    // Generate routes from views
+    this.routes = viewsContext.keys().map(key => {
+      const name = key.match(/([A-Z]\w+)View\.vue$/)[1];
+      const path = `/${name.toLowerCase()}`;
+      return { path, name };
+    }).filter(route => route.name !== 'Home'); // Exclude Home since it's handled separately
+  },
   methods: {
+    formatRouteName(name) {
+      // Convert camelCase to Title Case with spaces
+      return name.replace(/([A-Z])/g, ' $1').trim();
+    },
     closeToC() {
       const toggle = document.getElementsByClassName('Hamburger')[0]
       const toc = document.getElementsByClassName('ToC')[0];      

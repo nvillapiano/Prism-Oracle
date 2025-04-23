@@ -11,7 +11,7 @@ module.exports = defineConfig({
     sourceMap: true,
     loaderOptions: {
       sass: {
-        additionalData: `@import "@/globals/_mixins.scss";`
+        additionalData: `@use "@/globals/index" as *;`
       }
     }
   }

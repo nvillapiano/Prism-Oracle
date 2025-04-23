@@ -1,4 +1,11 @@
-@import "./_reset";
-@import "./_override";
-@import "./_colors";
-@import "./_variables";
+// Import all base modules
+@use 'reset';
+@use 'override';
+@use 'colors';
+@use 'variables';
+@use 'mixins';
+
+// Re-export modules that need to be available to components
+@forward 'variables';
+@forward 'colors';
+@forward 'mixins';

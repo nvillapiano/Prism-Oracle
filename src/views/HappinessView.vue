@@ -3,20 +3,20 @@
       <Card 
         cardName="Happiness"
       >
-        <Happiness />
+        <HappinessCard />
       </Card>    
   </div>
 </template>
 
 <script>
 import Card from '../components/Card.vue'
-import Happiness from '@/components/cards/Happiness.vue';
+import HappinessCard from '@/components/cards/HappinessCard.vue';
 
 export default {
-  name: 'happiness',
+  name: 'HappinessView',
   components: {
     Card,
-    Happiness
+    HappinessCard
   },
 };
 </script>

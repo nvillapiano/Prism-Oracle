@@ -1,22 +1,22 @@
 <template>
-  <div class="Energy__page">
+  <div class="Rejection__page">
       <Card 
-        cardName="Energy"
+        cardName="Rejection"
       >
-        <Energy />
+        <RejectionCard />
       </Card>    
   </div>
 </template>
 
 <script>
 import Card from '../components/Card.vue'
-import Energy from '@/components/cards/Energy.vue';
+import RejectionCard from '@/components/cards/RejectionCard.vue';
 
 export default {
-  name: 'energy',
+  name: 'RejectionView',
   components: {
     Card,
-    Energy
+    RejectionCard
   },
 };
 </script>

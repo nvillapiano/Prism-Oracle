@@ -1,22 +1,22 @@
 <template>
-  <div class="Stop__page">
+  <div class="Strength__page">
       <Card 
-        cardName="Stop"
+        cardName="Strength"
       >
-        <Stop />
+        <StrengthCard />
       </Card>    
   </div>
 </template>
 
 <script>
 import Card from '../components/Card.vue'
-import Stop from '@/components/cards/Stop.vue';
+import StrengthCard from '@/components/cards/StrengthCard.vue';
 
 export default {
-  name: 'stop',
+  name: 'StrengthView',
   components: {
     Card,
-    Stop
+    StrengthCard
   },
 };
 </script>

@@ -12,7 +12,7 @@
 
 <script>
 export default {
-  name: 'Stop',
+  name: 'StopCard',
   props: {
     templateProp: String
   }
@@ -32,7 +32,7 @@ export default {
   &__sign {
     width: 80%;
     min-height: 40%;
-    background: var(--color__white);    
+    background: var(--color__stopsign);    
     position: absolute;
     top: 50%;
     left: 50%;
@@ -48,7 +48,7 @@ export default {
       top: 0;
       left: 0;
       z-index: 2;
-      background: var(--color__stop);
+      background: var(--color__stopsign);
       width: 100%;
       height: 100%;
       clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);   
@@ -74,7 +74,7 @@ export default {
         top: 0;
         left: 0;
         z-index: 2;
-        background: var(--color__stop);
+        background: var(--color__stopsign);
         width: 100%;
         height: 100%;
         clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);   
@@ -86,7 +86,6 @@ export default {
       position: absolute;
       width: 100%;
       height: 100%;
-      // background: blue;
       z-index: 3;
       transform: rotate(45deg) scale(0.75);
 

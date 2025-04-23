@@ -16,6 +16,7 @@ import Hamburger from '@/components/Hamburger.vue'
 import ToC from '@/components/ToC.vue'
 
 export default {
+  name: 'App',
   components: {
     Hamburger,
     ToC

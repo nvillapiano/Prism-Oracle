@@ -1,22 +1,22 @@
 <template>
-  <div class="Anger__page">
+  <div class="Success__page">
       <Card 
-        cardName="Anger"
+        cardName="Success"
       >
-        <Anger />
+        <SuccessCard />
       </Card>    
   </div>
 </template>
 
 <script>
 import Card from '../components/Card.vue'
-import Anger from '@/components/cards/Anger.vue';
+import SuccessCard from '@/components/cards/SuccessCard.vue';
 
 export default {
-  name: 'anger',
+  name: 'SuccessView',
   components: {
     Card,
-    Anger
+    SuccessCard
   },
 };
 </script>

@@ -1,26 +1,22 @@
 <template>
   <div class="home">
-  <section>
-    <h1>Prism Oracle</h1>
-    <h2>by Nicole Pivirotto</h2>
-  </section>
-
+    <section>
+      <h1>Prism Oracle</h1>
+      <h2>by Nicole Pivirotto</h2>
+    </section>
   </div>
 </template>
 
 <script>
-
 export default {
-  name: 'home',
+  name: 'HomeView',
   components: {
   },
 };
 </script>
 
 <style lang="scss">
-
 * {
-
   &::selection {
     text-shadow: 0px 0px 20px rgba(var(--color__black), 0.5);
   }
@@ -62,7 +58,5 @@ export default {
       }
     }
   }
-
 }
-
 </style>

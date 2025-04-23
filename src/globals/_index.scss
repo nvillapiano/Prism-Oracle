@@ -2,7 +2,9 @@
 @use 'override';
 @use 'colors';
 @use 'variables';
+@use 'mixins';
 
-// Re-export variables and mixins for use in components
+// Re-export variables, colors, and mixins for use in components
 @forward 'variables';
-@forward 'colors'; 
+@forward 'colors';
+@forward 'mixins'; 

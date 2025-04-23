@@ -18,7 +18,7 @@
 
 <script>
 export default {
-  name: 'Template',
+  name: 'Pain',
   props: {
     templateProp: String
   }
@@ -26,15 +26,6 @@ export default {
 </script>
 
 <style lang="scss">
-
-@mixin dots() {
-  background-image: 
-    radial-gradient(var(--color__white) 10%, transparent 11%),
-    radial-gradient(var(--color__white) 10%, transparent 11%);
-  background-size: 8px 11px;
-  background-position: 0;
-  background-repeat: repeat;  
-}
 
 .Pain {
 
@@ -44,8 +35,8 @@ export default {
     left: 0;
     width: 100%;
     height: 100%;
-    background: var(--color__pain);
-    @include dots();
+    background-color: var(--color__pain);
+    @extend %dotMatrixLarge;
   }
 
   &__drips {
@@ -54,7 +45,7 @@ export default {
     left: 0;
     width: 100%;
     height: 36%;
-    background: var(--color__pain);
+    background-color: var(--color__pain);
   }
 
   &__drip-crest {
@@ -63,7 +54,7 @@ export default {
     left: 20%;
     width: 20%;
     height: 43px;
-    background: var(--color__pain);
+    background-color: var(--color__pain);
     border: 1px solid var(--color__white);
     z-index: 1;
 
@@ -109,14 +100,14 @@ export default {
     aspect-ratio: 1/1.53;
     width: calc(20% + 2px);
     border-radius: 150px 150px 0 0;
-    background: var(--color__pain);
+    background-color: var(--color__pain);
     transform: rotate(180deg);
     border: 1px solid white;
     border-bottom: none;
-    @include dots();
+    @extend %dotMatrixLarge;
 
     &:nth-of-type(3) {
-      bottom: 112px;
+      bottom: 110px;
       background-position: 1px 0px;
     }
 
@@ -127,6 +118,11 @@ export default {
       aspect-ratio: 1/1.881;
       background-position: 3.6px 6px;
       z-index: 2;
+
+      @media (-webkit-max-device-pixel-ratio: 1.1) {
+        width: calc(20% + 3px);
+        aspect-ratio: 1/1.49;
+      }
     }
 
     &:nth-of-type(5) {
@@ -135,6 +131,11 @@ export default {
       width: calc(20% + 3px);
       aspect-ratio: 1/1.9;
       background-position: -1px -9px;
+
+      @media (-webkit-max-device-pixel-ratio: 1.1) {
+        bottom: 141px;
+        aspect-ratio: 1/1.87;
+      }
     }
   }
 
@@ -144,7 +145,7 @@ export default {
     left: 57px;
     width: 5px;
     height: 128px;
-    background: var(--color__pain);
+    background-color: var(--color__pain);
     z-index: 2;
     border-radius: 12px 5px 6px;
 

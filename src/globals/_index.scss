@@ -1,0 +1,10 @@
+@use 'reset';
+@use 'override';
+@use 'colors';
+@use 'variables';
+@use 'mixins';
+
+// Re-export variables, colors, and mixins for use in components
+@forward 'variables';
+@forward 'colors';
+@forward 'mixins'; 

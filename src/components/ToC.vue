@@ -2,18 +2,13 @@
   <section class="ToC">
     <div @click="closeToC($event)" class="ToC__overlay"></div>
     <div class="ToC__list">
-      <router-link class="ToC__link" to="/home">🏠 Home</router-link>
-      <router-link class="ToC__link" to="/home">🗣️ About</router-link>
+      <router-link @click="closeToC($event)" class="ToC__link" to="/home">🏠 Home</router-link>
+      <!-- <router-link @click="closeToC($event)" class="ToC__link" to="/home">🗣️ About</router-link> -->
       <div class="ToC__link">🃏 Cards</div>
       <ul>
-        <li>
-          <router-link to='/pain'>
-            Pain
-          </router-link>
-        </li>
-        <li>
-          <router-link to='/anger'>
-            Anger
+        <li v-for="route in routes" :key="route.path">
+          <router-link @click="closeToC($event)" :to="route.path">
+            {{ formatRouteName(route.name) }}
           </router-link>
         </li>
       </ul>
@@ -22,11 +17,21 @@
 </template>
 
 <script>
+import { generateRoutes, formatRouteName } from '@/utils/routeUtils';
+
 export default {
   name: 'Toc',
-  props: {
-  }, 
+  data() {
+    return {
+      routes: []
+    }
+  },
+  created() {
+    // Generate routes from views, excluding Home and not including component definitions
+    this.routes = generateRoutes({ includeComponent: false, excludeHome: true });
+  },
   methods: {
+    formatRouteName,
     closeToC() {
       const toggle = document.getElementsByClassName('Hamburger')[0]
       const toc = document.getElementsByClassName('ToC')[0];      

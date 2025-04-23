@@ -25,6 +25,19 @@ export default {
 
 <style lang="scss">
 
+// Card color definitions
+$card-colors: (
+  'Anger': 'anger',
+  'Pain': 'pain',
+  'Stop': 'stopsign',
+  'Strength': 'strength',
+  'Energy': 'energy',
+  'Frustration': 'frustration',
+  'Happiness': 'happiness',
+  'Rejection': 'rejection',
+  'Success': 'success'
+);
+
 @mixin boxShadow($color) {
   box-shadow: 23px 18px 31px var(--color__#{$color});
 }
@@ -108,9 +121,9 @@ export default {
   }
 }
 
-// Colors
-
-@include cardColorBase(Anger, anger);
-@include cardColorBase(Pain, pain);
+// Colors - Automatically generate color variants
+@each $displayName, $colorVar in $card-colors {
+  @include cardColorBase($displayName, $colorVar);
+}
 
 </style>

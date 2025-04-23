@@ -16,6 +16,7 @@ import Hamburger from '@/components/Hamburger.vue'
 import ToC from '@/components/ToC.vue'
 
 export default {
+  name: 'App',
   components: {
     Hamburger,
     ToC
@@ -24,8 +25,6 @@ export default {
 </script>
 
 <style lang="scss">
-
-@import "@/globals/index.scss";
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;500&display=swap');
 
 html,

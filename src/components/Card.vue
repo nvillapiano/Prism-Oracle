@@ -60,7 +60,7 @@ $card-colors: (
 
 .Card {
   margin: 0 auto;
-  min-width: 320px;
+  width: 320px;
   aspect-ratio: 1/1.55;
   border-radius: 0.5rem;
   padding: 1rem;

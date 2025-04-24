@@ -1,16 +1,30 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import { generateRoutes } from '@/utils/routeUtils'
+
+const generatedRoutes = generateRoutes({ includeComponent: true })
 
 const routes = [
+  // Explicit home route
   {
     path: '/',
     name: 'Home',
-    component: () => import('../views/Home.vue')
+    component: () => import('../views/HomeView.vue')
+  },
+  // Alternative home route
+  {
+    path: '/home',
+    redirect: '/'
+  },
+  ...generatedRoutes,
+  // Catch-all route
+  {
+    path: '/:pathMatch(.*)*',
+    redirect: '/'
   }
-  // Add your other routes here
 ]
 
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes
 })
 

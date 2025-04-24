@@ -47,7 +47,6 @@ export default {
 </script>
 
 <style lang="scss">
-
 .Hamburger {
   position: fixed;
   top: 1rem;
@@ -97,9 +96,7 @@ export default {
   }    
 
   &.hamburger--active {      
-    
     div {
-
       &:nth-of-type(1) {
         transform: translateY(0.7rem);
       }
@@ -115,9 +112,7 @@ export default {
   }
 
   &.hamburger--active-cross {      
-    
     div {
-
       &:nth-of-type(1) {
         transform: translateY(0.75rem) rotate(45deg);
       }
@@ -133,9 +128,7 @@ export default {
   }    
 
   &.hamburger--deactivate {      
-    
     div {
-
       &:nth-of-type(1) {
         transform: translateY(0);
       }
@@ -150,5 +143,4 @@ export default {
     }
   }
 }
-
 </style>

@@ -1,9 +1,50 @@
 <template>
-  <Gallery />
+  <div class="gallery">
+    <div class="gallery__grid">
+      <!-- Original static implementation:
+      <Card cardName="Strength">
+        <StrengthCard />
+      </Card>
+      <Card cardName="Success">
+        <SuccessCard />
+      </Card>
+      <Card cardName="Rejection">
+        <RejectionCard />
+      </Card>
+      <Card cardName="Stop">
+        <StopCard />
+      </Card>
+      <Card cardName="Happiness">
+        <HappinessCard />
+      </Card>
+      <Card cardName="Pain">
+        <PainCard />
+      </Card>
+      <Card cardName="Energy">
+        <EnergyCard />
+      </Card>
+      <Card cardName="Frustration">
+        <FrustrationCard />
+      </Card>
+      <Card cardName="Anger">
+        <AngerCard />
+      </Card>
+      -->
+      
+      <!-- Dynamic implementation: -->
+      <Card 
+        v-for="(card, name) in cards" 
+        :key="name"
+        :cardName="name"
+      >
+        <component :is="card" />
+      </Card>
+    </div>
+  </div>
 </template>
 
 <script>
-import Gallery from '@/components/Gallery.vue'
+import Card from '@/components/Card.vue'
 
 // Original static imports:
 // import StrengthCard from '@/components/cards/StrengthCard.vue'
@@ -20,9 +61,9 @@ import Gallery from '@/components/Gallery.vue'
 const cardComponents = import.meta.glob('@/components/cards/*Card.vue', { eager: true })
 
 export default {
-  name: 'GalleryView',
+  name: 'Gallery',
   components: {
-    Gallery,
+    Card,
     // Original static component registration:
     // StrengthCard,
     // SuccessCard,
@@ -54,22 +95,11 @@ export default {
 .gallery {
   min-height: 100vh;
   padding: 2rem;
-  width: 100%;
-  background: linear-gradient(45deg, rgba(255,0,0,1) 0%, rgba(255,154,0,1) 10%, rgba(208,222,33,1) 20%, rgba(79,220,74,1) 30%, rgba(63,218,216,1) 40%, rgba(47,201,226,1) 50%, rgba(28,127,238,1) 60%, rgba(95,21,242,1) 70%, rgba(186,12,248,1) 80%, rgba(251,7,217,1) 90%, rgba(255,0,0,1) 100%);
 
   &__grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-    max-width: calc(100vw - 4rem);
-    margin: 0 auto;
-  }
-
-  .Card {
-    
-    &::before {
-      content: '';
-    }
   }
 }
 </style> 

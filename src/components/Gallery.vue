@@ -44,6 +44,7 @@
 </template>
 
 <script>
+import { markRaw } from 'vue'
 import Card from '@/components/Card.vue'
 
 // Original static imports:
@@ -80,7 +81,7 @@ export default {
     const cards = Object.entries(cardComponents).reduce((acc, [path, module]) => {
       // Extract name from path (e.g., "Strength" from "/components/cards/StrengthCard.vue")
       const name = path.match(/\/(\w+)Card\.vue$/)[1]
-      acc[name] = module.default
+      acc[name] = markRaw(module.default) // Mark the component as raw to prevent reactivity
       return acc
     }, {})
 
@@ -97,6 +98,7 @@ export default {
   padding: 2rem;
   max-width: 1200px;
   margin: 0 auto;
+  
   &__grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

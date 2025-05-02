@@ -7,7 +7,6 @@
     <main>
       <router-view/>
     </main>
-
   </div>
 </template>
 
@@ -27,10 +26,15 @@ export default {
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;500&display=swap');
 
+:root {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
+}
+
 html,
 body {
-  font-family: 'Work Sans', sans-serif;  
-  font-weight: 300;
+  margin: 0;
+  padding: 0;
 }
 
 main {
@@ -40,5 +44,4 @@ main {
   align-items: center;
   justify-content: center;
 }
-
 </style>

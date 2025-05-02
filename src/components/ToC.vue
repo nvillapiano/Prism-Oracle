@@ -60,7 +60,6 @@ export default {
 </script>
 
 <style lang="scss">
-
 .ToC {
   position: fixed;
   top: 0;
@@ -114,9 +113,6 @@ export default {
     transform: translateX(100%);
     transition: all 0.4s;
 
-    ul {
-    }
-
     li {
       list-style: none;
       display: flex;   
@@ -124,23 +120,13 @@ export default {
       position: relative;
       margin-left: 2.7rem;
       
-      // &::before {
-      //   content: '🔮';         
-      //   position: relative;
-      //   left: -0.5rem;     
-      //   font-size: 0.75rem;
-      // }
-
       a {        
         color: var(--color__white);
         text-decoration: none;
         font-size: 1.4rem;
         font-weight: 300;
-
-        // padding: 0.1rem 0;
       }
     }
   }
 }
-
 </style>
